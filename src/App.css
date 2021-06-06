@@ -1,0 +1,14 @@
+.App {
+	text-align: center;
+}
+
+.App-header {
+	font-size: 50px;
+	font-weight: bold;
+	color: rgb(163, 167, 171);
+}
+
+.App-intro {
+	color: rgb(105, 107, 115);
+	margin-bottom: 20px;
+}
