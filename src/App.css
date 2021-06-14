@@ -1,5 +1,8 @@
-.App {
+body {
 	text-align: center;
+	font-family: "Roboto", sans-serif;
+	background-color: rgb(227, 225, 226);
+	opacity: 0.7;
 }
 
 .App-header {
@@ -11,4 +14,5 @@
 .App-intro {
 	color: rgb(105, 107, 115);
 	margin-bottom: 20px;
+	font-weight: bold;
 }

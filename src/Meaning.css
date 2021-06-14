@@ -1,0 +1,16 @@
+.Meaning-definition {
+	font-size: 15px;
+}
+
+.Meaning-example {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.Meaning-definition::first-letter {
+	text-transform: capitalize;
+}
+
+.Meaning-example::first-letter {
+	text-transform: capitalize;
+}
