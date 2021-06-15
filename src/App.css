@@ -16,3 +16,8 @@ body {
 	margin-bottom: 20px;
 	font-weight: bold;
 }
+
+.App {
+	max-width: 950px;
+	margin: 0 auto;
+}
