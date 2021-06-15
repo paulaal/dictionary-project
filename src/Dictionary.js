@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
+import Footer from "./Footer";
 import "./Dictionary.css";
 
 export default function Dictionary() {
@@ -42,6 +43,7 @@ export default function Dictionary() {
 			</form>
 			<Results data={info} />
 			<Photos photos={photos} />
+			<Footer />
 		</div>
 	);
 }
