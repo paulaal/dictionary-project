@@ -1,6 +1,9 @@
-.Synonyms li {
+.Synonyms .btn-primary {
 	display: inline-block;
 	padding-right: 10px;
+	background-color: grey;
+	margin-right: 10px;
+	border-color: grey;
 }
 
 .Synonyms {

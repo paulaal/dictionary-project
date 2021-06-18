@@ -9,8 +9,9 @@ export default function Dictionary() {
 	let [keyword, setKeyword] = useState(null);
 	let [info, setInfo] = useState(null);
 	let [photos, setPhotos] = useState(null);
+	let [loaded, setLoaded] = useState(false)
 
-	function handleResponse(response) {
+	function handleResponse(response) {		
 		setInfo(response.data[0]);
 	}
 
@@ -21,6 +22,7 @@ export default function Dictionary() {
 	function search(event) {
 		//documentation https://dictionaryapi.dev/
 		event.preventDefault();
+		setLoaded(true)
 		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
 		axios.get(apiUrl).then(handleResponse);
 
@@ -35,15 +37,27 @@ export default function Dictionary() {
 		event.preventDefault();
 		setKeyword(event.target.value);
 	}
-
-	return (
-		<div className="Dictionary">
-			<form onSubmit={search}>
-				<input type="search" onChange={handleKeyword} />
-			</form>
-			<Results data={info} />
-			<Photos photos={photos} />
-			<Footer />
-		</div>
-	);
+	if (loaded){
+		return (
+			<div className="Dictionary-loaded">
+				<form onSubmit={search}>
+					<input type="search" onChange={handleKeyword} />
+				</form>
+				<Results data={info} />
+				<Photos photos={photos} />
+				<Footer />				
+			</div>
+			)
+	}else{
+		return(
+			<div className="Dictionary-notLoaded">
+				<form onSubmit={search}>
+					<input type="search" onChange={handleKeyword} />
+				</form>
+				<Results data={info} />
+				<Photos photos={photos} />
+				<Footer />
+				</div>
+			)
+		}
 }
